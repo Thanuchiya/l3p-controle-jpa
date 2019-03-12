@@ -1,9 +1,7 @@
 package fr.ekinci.demojpa.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -16,4 +14,37 @@ public class SocieteEntity {
         private long id;
         private  String name;
 
+    @OneToMany(mappedBy = "cinema")
+    private List<CinemaEntity> cinemas;
+
+    public SocieteEntity(long id, String name, List<CinemaEntity> cinemas) {
+        this.id = id;
+        this.name = name;
+        this.cinemas = cinemas;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<CinemaEntity> getCinemas() {
+        return cinemas;
+    }
+
+    public void setCinemas(List<CinemaEntity> cinemas) {
+        this.cinemas = cinemas;
+    }
+}
+
