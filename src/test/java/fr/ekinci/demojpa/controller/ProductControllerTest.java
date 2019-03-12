@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.ekinci.demojpa.DemoJpaApplication;
 import fr.ekinci.demojpa.configuration.DatabaseConfiguration;
 import fr.ekinci.demojpa.model.ProductEntity;
-import fr.ekinci.demojpa.model.ThemeEntity;
 import fr.ekinci.demojpa.service.ProductDAOviaJDBC;
 import fr.ekinci.demojpa.service.ProductDAOviaJPA;
 import fr.ekinci.demojpa.service.ProductDAOviaJdbcTemplate;
